@@ -3,7 +3,6 @@ from seleniumwire import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 import time
-from sqli_enter_form import dvwa
 
 def sql_in_uri(uri, k_conf, sqli):
     options = Options()
@@ -18,9 +17,6 @@ def sql_in_uri(uri, k_conf, sqli):
 
     try:
         driver.get(url=uri)
-        #4 dvwa
-        # dvwa(driver)
-        #----
         url_1 = driver.current_url
         c_url = url_1 + "?id=1&Submit=Submit#"
         try:
